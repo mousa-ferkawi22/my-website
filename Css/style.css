@@ -1,0 +1,155 @@
+/* Importeren van reset en fonts */
+@import url('reset.css');
+@import url('fonts.css');
+
+/* Algemene opmaak */
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header en navigatie */
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    margin-bottom: 3rem;
+}
+
+nav ul {
+    display: flex;
+    margin: 0.5rem;
+}
+nav ul li a {
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.navbar-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-name:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-image {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+/* Profielfoto styling */
+
+.profile-image img {
+    width: 100%;
+    max-width: 275px;
+    border-radius: 19%;
+    background-color: #5f5f7d;
+    margin-top: 1rem;
+    padding: 10px;
+    
+}
+
+/* Over-me sectie */
+.over-me-content {
+    padding-left: 1.5rem;
+}
+
+.over-me-content h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.over-me-content .cta-button{
+    background-color: #5f5f7d;
+    color: white;
+}
+
+/* Projectafbeelding styling */
+.project-img {
+    text-align: center;
+}
+
+.project-img img {
+    width: 1100px;
+    height: 225px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* Projectoverzicht */
+.projects-header {
+    text-align: center;
+    color: #2c3e50;
+    margin: 3rem;
+}
+
+.project-image {
+    height: 200px;
+    background-color: gray;
+}
+
+.project-info {
+    color: black;
+    color: #2c3e50;     
+    padding: 1rem;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+}
+
+.view-details {
+    color: darkslategray;
+    font-weight: bold;
+}
+
+/* Contactformulier */
+.contact {
+    max-width: 800px;
+    color: #2c3e50;
+    margin: auto;
+}
+
+.contact-form .btn-contact{
+    background-color: #5f5f7d;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto; 
+}
+
+/* Responsive styling voor mobiele weergaven */
+@media (max-width: 576px) {
+    .profile-image {
+        text-align: center;
+        margin-left: 50px; 
+        margin-bottom: 1.3rem;
+    }
+
+    .cta-button {
+
+        margin-left: 8rem; 
+    }
+   
+}
