@@ -54,10 +54,6 @@ nav ul li a:hover {
 
 .profile-image img {
     width: 100%;
-    max-width: 275px;
-    border-radius: 19%;
-    background-color: #5f5f7d;
-    margin-top: 1rem;
     padding: 10px;
     
 }
@@ -78,18 +74,34 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Projectafbeelding styling */
-.project-img {
-    text-align: center;
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-img img {
-    width: 1100px;
-    height: 225px;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 50px;
+/* Projectafbeelding styling */
+.project-image {
+    height: 250px;
+    overflow: hidden; 
 }
+
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.05);
+}
+
 
 /* Projectoverzicht */
 .projects-header {
@@ -98,16 +110,14 @@ nav ul li a:hover {
     margin: 3rem;
 }
 
-.project-image {
-    height: 200px;
-    background-color: gray;
-}
 
 .project-info {
     color: black;
-    color: #2c3e50;     
+    color: #2c3e50; 
+    min-height: 150px;    
     padding: 1rem;
 }
+
 
 .project-info h3 {
     font-size: 1.5rem;
@@ -119,16 +129,69 @@ nav ul li a:hover {
 }
 
 /* Contactformulier */
-.contact {
+.contact-form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
     max-width: 800px;
-    color: #2c3e50;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-form .btn-contact{
-    background-color: #5f5f7d;
-    color: white;
+.contact-form .form-group {
+    margin-bottom: 10px;
 }
+
+.contact-form label {
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #5f5f7d;
+    outline: none;
+}
+
+.contact-form .btn-primary {
+    background-color: #5f5f7d;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #4a4a6a;
+}
+#map {
+    height: 380px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
 
 /* Footer */
 footer {
@@ -152,4 +215,207 @@ footer {
         margin-left: 8rem; 
     }
    
+}
+
+/* Project Details Styling */
+.project-details {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.project-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.project-detail-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-content {
+    line-height: 1.6;
+}
+
+.project-intro {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.project-steps {
+    margin: 2rem 0;
+}
+
+.step-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.step {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.features-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.features-list li:before {
+    content: "•";
+    color: #2c3e50;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.pros-cons h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 1.5rem;
+}
+
+.pros-cons ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.pros-cons li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pros li:before {
+    content: "✓";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+}
+
+.cons li:before {
+    content: "×";
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+}
+
+.project-conclusion {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-left: 4px solid #2c3e50;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Responsive Design voor Project Details */
+@media (max-width: 768px) {
+    .step-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-details {
+        padding: 1rem;
+    }
+}
+
+.services-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-section h2 {
+    margin-bottom: 15px;
+}
+
+.services-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-section li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.services-section li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+/*Bedankt pagina*/
+.thank-you-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.thank-you-container h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.thank-you-container p {
+    font-size: 1.2rem;
+    color: #5f5f7d;
+    margin-bottom: 30px;
+}
+.thank-you-container .btn-primary {
+    background-color: #5f5f7d;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.thank-you-container .btn-primary:hover {
+    background-color: #4a4a6a;
 }
